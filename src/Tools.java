@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-import static org.junit.Assert.assertEquals;
-
 public class Tools {
     public static Solution getGreedySolution(int start_city) {
         Problem problem = Problem.getProblem();
