@@ -2,21 +2,21 @@ import java.util.ArrayList;
 
 public class Tester {
 
-    public static void do_EA_test(int repetitions, String problem_name) {
+    public static void do_EA_test(int repetitions, String problem_name,   int number_of_generations,
+    int population_size,
+    double mutation_chance,
+    double crossover_chance,
+    int tour_size ,
+    boolean is_ordered_crossover,
+    boolean is_swap,
+    boolean logs_enabled,
+    boolean write_enabled ) {
         MyLogger my_log = new MyLogger();
 
 
         ArrayList<Double> ea_solutions = new ArrayList<Double>();
 
-        int number_of_generations = 10000;
-        int population_size = 100;
-        double mutation_chance = 0.01;
-        double crossover_chance = 0.7;
-        int tour_size = 10;
-        boolean is_ordered_crossover = true;
-        boolean is_swap = true;
-        boolean logs_enabled = false;
-        boolean write_enabled = false;
+
 
         my_log.initiateLogger(problem_name + "EA_10_times_" + "number_of_generations " + number_of_generations +
                 "population_size " + population_size +
@@ -80,18 +80,18 @@ public class Tester {
         my_log.close();
     }
 
-    public static void do_tabu_test(int repetitions, String problem_name) {
+    public static void do_tabu_test(int repetitions, String problem_name, int number_of_iterations,
+    int number_of_neighbours,
+    int tabu_size,
+    boolean is_inverse,
+    boolean logs_enabled,
+    boolean write_enabled ) {
         MyLogger my_log = new MyLogger();
 
 
         ArrayList<Double> tabu_solutions = new ArrayList<Double>();
 
-        int number_of_iterations = 25000;
-        int number_of_neighbours = 200;
-        int tabu_size = 5000;
-        boolean is_inverse = false;
-        boolean logs_enabled = false;
-        boolean write_enabled = false;
+
 
         my_log.initiateLogger(problem_name + "_Tabu_10_times_with_" + number_of_iterations + "_iterations_" +
                 number_of_neighbours + "_neighbours_" + tabu_size + "_tabu_list_inverse_" + is_inverse , 50);
@@ -107,18 +107,18 @@ public class Tester {
         my_log.close();
     }
 
-    public static void do_SA_test(int repetitions, String problem_name) {
+    public static void do_SA_test(int repetitions, String problem_name, int number_of_iterations,
+    int number_of_neighbours,
+    double end_temp,
+    double begin_temp ,
+    boolean is_inverse,
+    boolean logs_enabled,
+    boolean write_enabled) {
         MyLogger my_log = new MyLogger();
 
         ArrayList<Double> SA_solutions = new ArrayList<Double>();
 
-        int number_of_iterations = 10000;
-        int number_of_neighbours = 10;
-        double end_temp = 10;
-        double begin_temp = 3500;
-        boolean is_inverse = false;
-        boolean logs_enabled = false;
-        boolean write_enabled = false;
+
 
         my_log.initiateLogger(problem_name + "_SA_10_times_with_" + number_of_iterations + "_iterations_" +
                 number_of_neighbours + "_neighbours_" + begin_temp + "begin_temperature"
